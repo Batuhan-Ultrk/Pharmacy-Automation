@@ -4,16 +4,16 @@ create or replace TRIGGER log_orders_insert_delete
   FOR EACH ROW
 DECLARE
     
-  log_message VARCHAR2(200);
+  log_message VARCHAR2(30);
 
 BEGIN
     IF INSERTING THEN
-        log_message := 'Sipariþ Girildi';
+        log_message := 'SipariÃ¾ Girildi';
          INSERT INTO log (log_id,order_id,message,log_time) VALUES (otomatik_artis.NEXTVAL,:new.order_id,log_message,sysdate);
     END IF;
     
     IF DELETING THEN
-         log_message := 'Sipariþ Silindi';
+         log_message := 'SipariÃ¾ Silindi';
          INSERT INTO log (log_id,order_id,message,log_time) VALUES (otomatik_artis.NEXTVAL,:old.order_id,log_message,sysdate);
     END IF;
     
