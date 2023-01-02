@@ -4,7 +4,7 @@ create or replace TRIGGER log_orders_insert_delete
   FOR EACH ROW
 DECLARE
     
-  log_message VARCHAR2(200);
+  log_message VARCHAR2(30);
 
 BEGIN
     IF INSERTING THEN
