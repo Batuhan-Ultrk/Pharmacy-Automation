@@ -1,5 +1,5 @@
 DECLARE
-	unitPrice NUMBER:=&BirimFiyati;
+	unitPrice NUMBER:=&unitPrice;
 	salePrice NUMBER:=&salePrice ;
 	p_id INVENTORY.MEDICATION_ID%TYPE:=&MedId;
 BEGIN
