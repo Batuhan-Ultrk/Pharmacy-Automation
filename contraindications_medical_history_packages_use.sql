@@ -1,0 +1,9 @@
+DECLARE
+
+    p_id PATIENTS.PATIENT_ID%TYPE:=&P_ID;
+
+BEGIN
+
+    CONTRAINDICATIONS_MEDICAL_HISTORY.get_words_list(p_id);
+
+END;
